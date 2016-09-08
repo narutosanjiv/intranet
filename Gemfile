@@ -1,19 +1,20 @@
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-ruby "2.2.4"
-gem 'rails', '4.2.0'
+ruby "2.3.0"
+gem 'rails', '~> 5.0.0'
+#gem 'rails', '~> 5.0', '>= 5.0.0.1'
 gem 'devise'
-gem 'mongoid'
-gem 'mongoid_slug'
+gem 'mongoid', '~> 6.0.0.beta'
+#gem 'mongoid'
+gem 'mongoid-slug', github: 'digitalplaywright/mongoid-slug'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
-gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 gem 'twitter-bootstrap-rails'
 gem 'haml-rails'
 gem 'cancan'
 gem 'bson_ext'
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0.6'
 gem 'kaminari'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'nested_form'
@@ -27,15 +28,15 @@ gem 'mini_magick'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-gem 'twitter-typeahead-rails', :git => "git://github.com/yourabi/twitter-typeahead-rails.git"
+gem 'coffee-rails', '~> 4.2.1'
+#gem 'twitter-typeahead-rails', :git => "git://github.com/yourabi/twitter-typeahead-rails.git"
 
 #mongoid-history
 gem 'mongoid-history', github: 'aq1018/mongoid-history'
 gem 'jquery-timepicker-rails'
 
-#sinatra 
-gem 'sinatra'
+#sinatra
+gem "sinatra", ">= 2.0.0.beta2"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -106,9 +107,9 @@ gem 'authority'
 # gem 'debugger', group: [:development, :test]
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
-gem 'light', git: 'git@github.com:joshsoftware/lightair.git', branch: 'engine'
+#gem 'light', git: 'git@github.com:joshsoftware/lightair.git', branch: 'engine'
 #gem 'light', path: '/home/shweta/project/light_air_engine/lightair'
-gem 'screamout', git: 'git@github.com:joshsoftware/screamout.git', branch: 'engine'
+gem 'screamout', path: '../screamout', branch: 'engine'
 gem 'mongoid_rateable', :git => 'git://github.com/PerfectMemory/mongoid_rateable.git'
 gem 'feedjira'
 gem 'rollbar'

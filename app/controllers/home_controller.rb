@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  
+
   def index
     @projects = Project.all_active
     #@bonusly_updates = get_bonusly_updates

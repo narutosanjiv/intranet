@@ -27,16 +27,16 @@ Rails.application.routes.draw do
 
   authenticate :user do
     mount Sidekiq::Web => '/sidekiq'
-    mount Light::Engine => '/newsletter'
+    #mount Light::Engine => '/newsletter'
     mount Screamout::Engine => '/screamout'
   end
 
   get 'contacts' => 'admins#contacts_from_site', as: 'site_contacts'
 
-  get 'calendar' => 'home#calendar', as: :calendar  
-  resources :leave_applications, only: [:index, :edit, :update] 
+  get 'calendar' => 'home#calendar', as: :calendar
+  resources :leave_applications, only: [:index, :edit, :update]
   resources :users, except: [:new, :create, :destroy] do
-    resources :leave_applications, except: [:view_leave_status, :index, :edit, :update] 
+    resources :leave_applications, except: [:view_leave_status, :index, :edit, :update]
     member do
       match :public_profile, via: [:get, :put]
       match :private_profile, via: [:get, :put]
@@ -51,13 +51,13 @@ Rails.application.routes.draw do
     end
   end
 
-  put 'available_leave/:id' => 'users#update_available_leave', as: :update_available_leave 
-  get 'view/leave_applications' => 'leave_applications#view_leave_status', as: :view_leaves 
-  #get 'cancel_leave_application' => 'leave_applications#cancel_leave', as: :cancel_leave 
+  put 'available_leave/:id' => 'users#update_available_leave', as: :update_available_leave
+  get 'view/leave_applications' => 'leave_applications#view_leave_status', as: :view_leaves
+  #get 'cancel_leave_application' => 'leave_applications#cancel_leave', as: :cancel_leave
   #get 'approve_leave_application' => 'leave_applications#approve_leave', as: :approve_leave
   get 'process_leave_application' => 'leave_applications#process_leave', as: :process_leave
   resources :projects
-  resources :attachments do 
+  resources :attachments do
     member do
       get :download_document
     end

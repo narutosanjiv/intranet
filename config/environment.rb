@@ -1,7 +1,5 @@
 # Load the Rails application.
-require File.expand_path('../application', __FILE__)
-
-#ENV['RAILS_ENV'] = 'production'
+require_relative 'application'
 
 # Initialize the Rails application.
-Intranet::Application.initialize!
+Rails.application.initialize!
