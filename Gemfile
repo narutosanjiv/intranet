@@ -10,7 +10,6 @@ gem 'mongoid', '~> 6.0.0.beta'
 gem 'mongoid-slug', github: 'digitalplaywright/mongoid-slug'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
-gem 'twitter-bootstrap-rails'
 gem 'haml-rails'
 gem 'cancan'
 gem 'bson_ext'
@@ -30,6 +29,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.2.1'
 #gem 'twitter-typeahead-rails', :git => "git://github.com/yourabi/twitter-typeahead-rails.git"
+
+gem "bower-rails", "~> 0.10.0"
 
 #mongoid-history
 gem 'mongoid-history', github: 'aq1018/mongoid-history'

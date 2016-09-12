@@ -125,6 +125,7 @@ GEM
       debug_inspector (>= 0.0.1)
     bootstrap-datepicker-rails (1.6.4.1)
       railties (>= 3.0)
+    bower-rails (0.10.0)
     brakeman (3.3.5)
     bson (4.1.1)
     bson_ext (1.5.1)
@@ -491,6 +492,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-datepicker-rails
+  bower-rails (~> 0.10.0)
   brakeman
   bson_ext
   cancan
