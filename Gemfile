@@ -19,8 +19,6 @@ gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'nested_form'
 gem "omniauth-google-oauth2"
 gem 'rnotifier'
-gem 'bootstrap-datepicker-rails'
-gem 'colorbox-rails'
 gem 'google_drive'
 gem 'redactor-rails'
 gem 'mini_magick'
@@ -30,11 +28,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2.1'
 #gem 'twitter-typeahead-rails', :git => "git://github.com/yourabi/twitter-typeahead-rails.git"
 
-gem "bower-rails", "~> 0.10.0"
-
 #mongoid-history
 gem 'mongoid-history', github: 'aq1018/mongoid-history'
-gem 'jquery-timepicker-rails'
 
 #sinatra
 gem "sinatra", ">= 2.0.0.beta2"
@@ -109,9 +104,16 @@ gem 'authority'
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 #gem 'light', git: 'git@github.com:joshsoftware/lightair.git', branch: 'engine'
-#gem 'light', path: '/home/shweta/project/light_air_engine/lightair'
-gem 'screamout', path: '../screamout', branch: 'engine'
+gem 'light', path: '../lightair'
+gem 'screamout', path: '../screamout'
 gem 'mongoid_rateable', :git => 'git://github.com/PerfectMemory/mongoid_rateable.git'
 gem 'feedjira'
 gem 'rollbar'
 gem 'aws-sdk'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap', '2.3.2'# '4.0.0.alpha.3'
+  gem 'rails-assets-bootstrap-datepicker', '1.5.0'
+  gem 'rails-assets-colorbox', '1.6.4'
+  gem 'rails-assets-jquery-timepicker-jt', '1.11.4'
+end

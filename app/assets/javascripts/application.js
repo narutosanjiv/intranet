@@ -10,24 +10,20 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require bootstrap
+//= require bootstrap-datepicker
+//= require colorbox
+//= require jquery-timepicker-jt
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require turbolinks
 //= require redactor-rails
-//= require bootstrap-datepicker/core
 //= require bootstrap-switch
 //= require jquery_nested_form
 //= require jqBootstrapValidation
 //= require select2.min
-//= require colorbox-rails
-//= require jquery.timepicker.js
-//= require twitter/typeahead
 //= require jquery.validate.min.js
-//= require screamout/filter.js
-//= require screamout/global.js
-//= require redactor-rails
 //= require_tree .
 
 

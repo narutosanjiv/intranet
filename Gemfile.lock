@@ -47,6 +47,37 @@ GIT
       activemodel (> 4, < 5.1)
 
 PATH
+  remote: ../lightair
+  specs:
+    light (0.0.1)
+      carrierwave
+      carrierwave-mongoid
+      coffee-rails (~> 4.2.1)
+      devise_invitable
+      google-api-client
+      google_drive
+      haml
+      haml-rails
+      jbuilder (~> 2.0)
+      jquery-rails
+      mini_magick
+      mongoid (~> 6.0.0.beta)
+      omniauth-google-oauth2
+      rails (~> 5.0.0)
+      redactor-rails
+      redis-namespace
+      redis-rails
+      rest_client
+      sass-rails (~> 5.0.6)
+      sendgrid
+      sendgrid_toolkit
+      sidekiq
+      simple_form
+      spring
+      turbolinks
+      uglifier (>= 1.3.0)
+
+PATH
   remote: ../screamout
   specs:
     screamout (0.0.1)
@@ -64,10 +95,10 @@ PATH
       rspec-rails
       sidekiq
       simple_form
-      twitter-typeahead-rails
 
 GEM
   remote: http://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actioncable (5.0.0.1)
       actionpack (= 5.0.0.1)
@@ -123,9 +154,6 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bootstrap-datepicker-rails (1.6.4.1)
-      railties (>= 3.0)
-    bower-rails (0.10.0)
     brakeman (3.3.5)
     bson (4.1.1)
     bson_ext (1.5.1)
@@ -156,10 +184,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
-    colorbox-rails (0.1.2)
-      jquery-rails
-      rails (>= 3.1.1)
-    commonjs (0.2.7)
     concurrent-ruby (1.0.2)
     connection_pool (2.2.0)
     daemons (1.2.4)
@@ -171,6 +195,9 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise_invitable (1.7.0)
+      actionmailer (>= 4.0.0)
+      devise (>= 4.0.0)
     diff-lcs (1.2.5)
     easy_diff (1.0.0)
     erubis (2.7.0)
@@ -229,17 +256,20 @@ GEM
       haml (~> 4.0.0)
       nokogiri (~> 1.6.0)
       ruby_parser (~> 3.5)
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
     httpclient (2.8.2.3)
     hurley (0.2)
     i18n (0.7.0)
     imgkit (1.6.1)
+    jbuilder (2.6.0)
+      activesupport (>= 3.0.0, < 5.1)
+      multi_json (~> 1.2)
     jmespath (1.3.1)
     jquery-rails (4.2.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jquery-timepicker-rails (1.4.3)
-      railties (>= 3.1.0)
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
@@ -251,13 +281,6 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.10.0)
-    less (2.6.0)
-      commonjs (~> 0.2.7)
-    less-rails (2.7.1)
-      actionpack (>= 4.0)
-      less (~> 2.6.0)
-      sprockets (> 2, < 4)
-      tilt
     libv8 (3.16.14.15)
     little-plugger (1.1.4)
     logging (2.1.0)
@@ -302,6 +325,7 @@ GEM
     multipart-post (2.0.0)
     mustermann (1.0.0.beta2)
     nested_form (0.3.2)
+    netrc (0.7.9)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -350,6 +374,15 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 5.0.0.1)
       sprockets-rails (>= 2.0.0)
+    rails-assets-bootstrap (2.3.2)
+      rails-assets-jquery (>= 1.8.0, < 2.1.0)
+    rails-assets-bootstrap-datepicker (1.5.0)
+      rails-assets-jquery (>= 1.7.1)
+    rails-assets-colorbox (1.6.4)
+      rails-assets-jquery (>= 1.3.2)
+    rails-assets-jquery (2.0.3)
+    rails-assets-jquery-timepicker-jt (1.11.4)
+      rails-assets-jquery (>= 1.7)
     rails-dom-testing (2.0.1)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6.0)
@@ -370,11 +403,31 @@ GEM
       mime-types
       orm_adapter
     redis (3.3.1)
+    redis-actionpack (5.0.0)
+      actionpack (>= 4.0.0, < 6)
+      redis-rack (~> 2.0.0.pre)
+      redis-store (~> 1.2.0.pre)
+    redis-activesupport (5.0.1)
+      activesupport (>= 3, < 6)
+      redis-store (~> 1.2.0)
+    redis-namespace (1.5.2)
+      redis (~> 3.0, >= 3.0.4)
+    redis-rack (2.0.0.pre)
+      rack (> 1.5, < 3)
+      redis-store (~> 1.2.0.pre)
+    redis-rails (5.0.1)
+      redis-actionpack (~> 5.0.0)
+      redis-activesupport (~> 5.0.0)
+      redis-store (~> 1.2.0)
+    redis-store (1.2.0)
+      redis (>= 2.2)
     ref (2.0.0)
     representable (2.3.0)
       uber (~> 0.0.7)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rest_client (1.8.3)
+      netrc (~> 0.7.7)
     retriable (2.1.0)
     rmagick (2.16.0)
     rnotifier (0.1.5)
@@ -416,6 +469,10 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sendgrid (1.2.4)
+      json
+    sendgrid_toolkit (1.4.0)
+      httparty (>= 0.7.6)
     sexp_processor (4.7.0)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
@@ -437,6 +494,7 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0.beta2)
       tilt (~> 2.0)
+    spring (1.7.2)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -458,15 +516,6 @@ GEM
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
-    twitter-bootstrap-rails (3.2.2)
-      actionpack (>= 3.1)
-      execjs (>= 2.2.2, >= 2.2)
-      less-rails (>= 2.5.0)
-      railties (>= 3.1)
-    twitter-typeahead-rails (0.11.1)
-      actionpack (>= 3.1)
-      jquery-rails
-      railties (>= 3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uber (0.0.15)
@@ -491,15 +540,12 @@ DEPENDENCIES
   aws-sdk
   better_errors
   binding_of_caller
-  bootstrap-datepicker-rails
-  bower-rails (~> 0.10.0)
   brakeman
   bson_ext
   cancan
   carrierwave-mongoid
   codeclimate-test-reporter
   coffee-rails (~> 4.2.1)
-  colorbox-rails
   database_cleaner
   devise
   execjs
@@ -510,9 +556,9 @@ DEPENDENCIES
   google_drive
   haml-rails
   jquery-rails
-  jquery-timepicker-rails
   jquery-turbolinks
   kaminari
+  light!
   mina!
   mina_extensions!
   mini_magick
@@ -524,6 +570,10 @@ DEPENDENCIES
   nested_form
   omniauth-google-oauth2
   rails (~> 5.0.0)
+  rails-assets-bootstrap (= 2.3.2)!
+  rails-assets-bootstrap-datepicker (= 1.5.0)!
+  rails-assets-colorbox (= 1.6.4)!
+  rails-assets-jquery-timepicker-jt (= 1.11.4)!
   redactor-rails
   rmagick
   rnotifier
@@ -540,7 +590,6 @@ DEPENDENCIES
   therubyracer
   thin
   turbolinks
-  twitter-bootstrap-rails
   uglifier (>= 1.3.0)
   unicorn
   whenever
