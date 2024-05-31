@@ -2,37 +2,37 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby "2.2.4"
-gem 'rails', '4.2.0'
-gem 'devise'
+gem 'rails', '4.2.1'
+gem 'devise', '>= 3.5.7'
 gem 'mongoid'
 gem 'mongoid_slug'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
 gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
-gem 'twitter-bootstrap-rails'
-gem 'haml-rails'
+gem 'twitter-bootstrap-rails', '>= 3.2.0'
+gem 'haml-rails', '>= 1.0.0'
 gem 'cancan'
 gem 'bson_ext'
-gem 'sass-rails', '~> 4.0.0'
-gem 'kaminari'
+gem 'sass-rails', '~> 5.0.0'
+gem 'kaminari', '>= 0.16.2'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'nested_form'
 gem "omniauth-google-oauth2"
 gem 'rnotifier'
-gem 'bootstrap-datepicker-rails'
+gem 'bootstrap-datepicker-rails', '>= 1.6.0'
 gem 'colorbox-rails'
-gem 'google_drive'
+gem 'google_drive', '>= 1.0.6'
 gem 'redactor-rails'
 gem 'mini_magick'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
 gem 'twitter-typeahead-rails', :git => "git://github.com/yourabi/twitter-typeahead-rails.git"
 
 #mongoid-history
 gem 'mongoid-history', github: 'aq1018/mongoid-history'
-gem 'jquery-timepicker-rails'
+gem 'jquery-timepicker-rails', '>= 1.11.4'
 
 #sinatra 
 gem 'sinatra'
@@ -41,11 +41,11 @@ gem 'sinatra'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.1.1'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-gem 'jquery-turbolinks'
+gem 'turbolinks', '>= 2.4.0'
+gem 'jquery-turbolinks', '>= 2.1.0'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 1.2'
@@ -56,9 +56,9 @@ group :doc do
 end
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.1.0'
   gem 'mongoid-rspec'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '>= 4.5.0'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
   gem 'faker'
@@ -110,6 +110,6 @@ gem 'light', git: 'git@github.com:joshsoftware/lightair.git', branch: 'engine'
 #gem 'light', path: '/home/shweta/project/light_air_engine/lightair'
 gem 'screamout', git: 'git@github.com:joshsoftware/screamout.git', branch: 'engine'
 gem 'mongoid_rateable', :git => 'git://github.com/PerfectMemory/mongoid_rateable.git'
-gem 'feedjira'
+gem 'feedjira', '>= 1.6.0'
 gem 'rollbar'
-gem 'aws-sdk'
+gem 'aws-sdk', '>= 1.44.0'
