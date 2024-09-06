@@ -2,19 +2,19 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby "2.2.4"
-gem 'rails', '4.2.0'
+gem 'rails', '7.0.0'
 gem 'devise'
 gem 'mongoid'
 gem 'mongoid_slug'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
 gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '>= 4.0.0'
 gem 'haml-rails'
 gem 'cancan'
 gem 'bson_ext'
-gem 'sass-rails', '~> 4.0.0'
-gem 'kaminari'
+gem 'sass-rails', '~> 5.0.8'
+gem 'kaminari', '>= 1.0.0'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'nested_form'
 gem "omniauth-google-oauth2"
@@ -27,7 +27,7 @@ gem 'mini_magick'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 5.0.0'
 gem 'twitter-typeahead-rails', :git => "git://github.com/yourabi/twitter-typeahead-rails.git"
 
 #mongoid-history
