@@ -2,19 +2,19 @@ source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 ruby "2.2.4"
-gem 'rails', '4.2.0'
+gem 'rails', '7.0.0'
 gem 'devise'
 gem 'mongoid'
 gem 'mongoid_slug'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'rmagick'
 gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', '>= 3.2.2'
 gem 'haml-rails'
 gem 'cancan'
 gem 'bson_ext'
-gem 'sass-rails', '~> 4.0.0'
-gem 'kaminari'
+gem 'sass-rails', '~> 6.0.0'
+gem 'kaminari', '>= 1.0.0'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'nested_form'
 gem "omniauth-google-oauth2"
@@ -44,7 +44,7 @@ gem 'sinatra'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks', '>= 5.0.0'
 gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
